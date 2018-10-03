@@ -1,0 +1,12 @@
+version: "2.0"
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    ports:
+      - "443:443"
+      - "80:80"
+      - "2222:22"
+    volumes:
+      - "./config:/etc/gitlab"
+      - "./logs:/var/log/gitlab"
+      - "./data:/var/opt/gitlab"
